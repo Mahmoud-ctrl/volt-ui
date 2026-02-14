@@ -1,0 +1,777 @@
+[
+  {
+    "id": "wave-text",
+    "label": "Wave Text",
+    "componentPath": "WaveText",
+    "icon": "Type",
+    "description": "Smooth wave animation that flows through each character",
+    "defaultProps": {
+      "text": "Wave Animation",
+      "delay": 0.05,
+      "duration": 0.6,
+      "amplitude": 20
+    },
+    "controls": [
+      {
+        "name": "text",
+        "label": "Text Content",
+        "type": "select",
+        "options": [
+          { "label": "Wave Animation", "value": "Wave Animation" },
+          { "label": "Hello World", "value": "Hello World" },
+          { "label": "Aura UI", "value": "Aura UI" },
+          { "label": "Custom Text", "value": "Custom Text" }
+        ]
+      },
+      {
+        "name": "delay",
+        "label": "Character Delay",
+        "type": "range",
+        "min": 0,
+        "max": 0.2,
+        "step": 0.01,
+        "unit": "s"
+      },
+      {
+        "name": "duration",
+        "label": "Animation Duration",
+        "type": "range",
+        "min": 0.2,
+        "max": 2,
+        "step": 0.1,
+        "unit": "s"
+      },
+      {
+        "name": "amplitude",
+        "label": "Wave Height",
+        "type": "range",
+        "min": 5,
+        "max": 50,
+        "step": 5,
+        "unit": "px"
+      }
+    ]
+  },
+  {
+    "id": "glitch-text",
+    "label": "Glitch Text",
+    "componentPath": "GlitchText",
+    "icon": "Sparkles",
+    "description": "Cyberpunk-style glitch effect with color distortion",
+    "defaultProps": {
+      "text": "GLITCH.SYS",
+      "intensity": 5,
+      "speed": 0.3,
+      "colors": true
+    },
+    "controls": [
+      {
+        "name": "text",
+        "label": "Text Content",
+        "type": "select",
+        "options": [
+          { "label": "GLITCH.SYS", "value": "GLITCH.SYS" },
+          { "label": "ERROR 404", "value": "ERROR 404" },
+          { "label": "SYSTEM BREACH", "value": "SYSTEM BREACH" },
+          { "label": "CYBER TEXT", "value": "CYBER TEXT" }
+        ]
+      },
+      {
+        "name": "intensity",
+        "label": "Glitch Intensity",
+        "type": "range",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "unit": "px"
+      },
+      {
+        "name": "speed",
+        "label": "Animation Speed",
+        "type": "range",
+        "min": 0.1,
+        "max": 1,
+        "step": 0.1,
+        "unit": "s"
+      },
+      {
+        "name": "colors",
+        "label": "Color Distortion",
+        "type": "toggle"
+      }
+    ]
+  },
+  {
+  "id": "typewriter-text",
+  "label": "Typewriter Text",
+  "componentPath": "TypewriterText",
+  "icon": "Type",
+  "description": "Classic typewriter typing animation effect",
+  "defaultProps": {
+    "text": "Hello, World!",
+    "speed": 100,
+    "showCursor": true,
+    "loop": false
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "Hello, World!", "value": "Hello, World!" },
+        { "label": "Welcome Back", "value": "Welcome Back" },
+        { "label": "Loading...", "value": "Loading..." },
+        { "label": "Type Effect", "value": "Type Effect" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Typing Speed",
+      "type": "range",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "ms"
+    },
+    {
+      "name": "showCursor",
+      "label": "Show Cursor",
+      "type": "toggle"
+    },
+    {
+      "name": "loop",
+      "label": "Loop Animation",
+      "type": "toggle"
+    }
+  ]
+},
+{
+  "id": "shatter-text",
+  "label": "Shatter Text",
+  "componentPath": "ShatterText",
+  "icon": "Sparkles",
+  "description": "Text explodes and scatters on hover",
+  "defaultProps": {
+    "text": "SHATTER",
+    "explosive": true,
+    "speed": 0.5,
+    "scatter": 100
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "SHATTER", "value": "SHATTER" },
+        { "label": "EXPLODE", "value": "EXPLODE" },
+        { "label": "BREAK APART", "value": "BREAK APART" },
+        { "label": "BOOM", "value": "BOOM" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Animation Speed",
+      "type": "range",
+      "min": 0.2,
+      "max": 2,
+      "step": 0.1,
+      "unit": "s"
+    },
+    {
+      "name": "scatter",
+      "label": "Scatter Distance",
+      "type": "range",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "explosive",
+      "label": "Explosive Mode",
+      "type": "toggle"
+    }
+  ]
+},
+{
+  "id": "neon-text",
+  "label": "Neon Text",
+  "componentPath": "NeonText",
+  "icon": "Lightbulb",
+  "description": "Glowing neon sign with flickering effect",
+  "defaultProps": {
+    "text": "NEON LIGHTS",
+    "color": "#00ffff",
+    "flicker": true,
+    "glow": 20
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "NEON LIGHTS", "value": "NEON LIGHTS" },
+        { "label": "OPEN 24/7", "value": "OPEN 24/7" },
+        { "label": "RETRO VIBES", "value": "RETRO VIBES" },
+        { "label": "NIGHT MODE", "value": "NIGHT MODE" }
+      ]
+    },
+    {
+      "name": "color",
+      "label": "Neon Color",
+      "type": "select",
+      "options": [
+        { "label": "Cyan", "value": "#00ffff" },
+        { "label": "Pink", "value": "#ff00ff" },
+        { "label": "Green", "value": "#00ff00" },
+        { "label": "Orange", "value": "#ff6600" }
+      ]
+    },
+    {
+      "name": "glow",
+      "label": "Glow Intensity",
+      "type": "range",
+      "min": 5,
+      "max": 40,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "name": "flicker",
+      "label": "Flicker Effect",
+      "type": "toggle"
+    }
+  ]
+},
+{
+  "id": "split-text",
+  "label": "Split Text",
+  "componentPath": "SplitText",
+  "icon": "SplitSquareHorizontal",
+  "description": "Text splits apart on hover interaction",
+  "defaultProps": {
+    "text": "SPLIT TEXT",
+    "direction": "horizontal",
+    "distance": 50,
+    "speed": 0.6
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "SPLIT TEXT", "value": "SPLIT TEXT" },
+        { "label": "DIVIDE", "value": "DIVIDE" },
+        { "label": "SEPARATE", "value": "SEPARATE" },
+        { "label": "BREAK", "value": "BREAK" }
+      ]
+    },
+    {
+      "name": "direction",
+      "label": "Split Direction",
+      "type": "select",
+      "options": [
+        { "label": "Horizontal", "value": "horizontal" },
+        { "label": "Vertical", "value": "vertical" }
+      ]
+    },
+    {
+      "name": "distance",
+      "label": "Split Distance",
+      "type": "range",
+      "min": 10,
+      "max": 100,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Animation Speed",
+      "type": "range",
+      "min": 0.2,
+      "max": 1.5,
+      "step": 0.1,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "matrix-text",
+  "label": "Matrix Text",
+  "componentPath": "MatrixText",
+  "icon": "Code",
+  "description": "Matrix-style digital rain reveal effect",
+  "defaultProps": {
+    "text": "THE MATRIX",
+    "speed": 0.05,
+    "intensity": 5,
+    "color": "#00ff00"
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "THE MATRIX", "value": "THE MATRIX" },
+        { "label": "HACK THE PLANET", "value": "HACK THE PLANET" },
+        { "label": "SYSTEM ONLINE", "value": "SYSTEM ONLINE" },
+        { "label": "DECODING...", "value": "DECODING..." }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Character Speed",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.2,
+      "step": 0.01,
+      "unit": "s"
+    },
+    {
+      "name": "intensity",
+      "label": "Reveal Intensity",
+      "type": "range",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "color",
+      "label": "Matrix Color",
+      "type": "select",
+      "options": [
+        { "label": "Green", "value": "#00ff00" },
+        { "label": "Cyan", "value": "#00ffff" },
+        { "label": "Red", "value": "#ff0000" },
+        { "label": "Purple", "value": "#ff00ff" }
+      ]
+    }
+  ]
+},
+{
+  "id": "bounce-text",
+  "label": "Bounce Text",
+  "componentPath": "BounceText",
+  "icon": "ArrowUpDown",
+  "description": "Playful bouncing animation with elasticity",
+  "defaultProps": {
+    "text": "BOUNCE!",
+    "height": 30,
+    "stagger": 0.05,
+    "elasticity": 0.5
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "BOUNCE!", "value": "BOUNCE!" },
+        { "label": "JUMP UP", "value": "JUMP UP" },
+        { "label": "SPRING", "value": "SPRING" },
+        { "label": "HOP HOP", "value": "HOP HOP" }
+      ]
+    },
+    {
+      "name": "height",
+      "label": "Bounce Height",
+      "type": "range",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "name": "stagger",
+      "label": "Letter Delay",
+      "type": "range",
+      "min": 0,
+      "max": 0.2,
+      "step": 0.01,
+      "unit": "s"
+    },
+    {
+      "name": "elasticity",
+      "label": "Bounce Speed",
+      "type": "range",
+      "min": 0.3,
+      "max": 1.5,
+      "step": 0.1,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "flip-text",
+  "label": "Flip Text",
+  "componentPath": "FlipText",
+  "icon": "RotateCw",
+  "description": "3D card flip animation on hover",
+  "defaultProps": {
+    "text": "FRONT",
+    "backText": "BACK",
+    "speed": 0.6,
+    "axis": "y"
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Front Text",
+      "type": "select",
+      "options": [
+        { "label": "FRONT", "value": "FRONT" },
+        { "label": "HELLO", "value": "HELLO" },
+        { "label": "START", "value": "START" },
+        { "label": "CLICK ME", "value": "CLICK ME" }
+      ]
+    },
+    {
+      "name": "backText",
+      "label": "Back Text",
+      "type": "select",
+      "options": [
+        { "label": "BACK", "value": "BACK" },
+        { "label": "WORLD", "value": "WORLD" },
+        { "label": "END", "value": "END" },
+        { "label": "SURPRISE!", "value": "SURPRISE!" }
+      ]
+    },
+    {
+      "name": "axis",
+      "label": "Flip Axis",
+      "type": "select",
+      "options": [
+        { "label": "Vertical (Y)", "value": "y" },
+        { "label": "Horizontal (X)", "value": "x" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Flip Speed",
+      "type": "range",
+      "min": 0.3,
+      "max": 2,
+      "step": 0.1,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "gradient-text",
+  "label": "Gradient Text",
+  "componentPath": "GradientText",
+  "icon": "Palette",
+  "description": "Flowing animated gradient through text",
+  "defaultProps": {
+    "text": "GRADIENT FLOW",
+    "colors": ["#ff0080", "#ff8c00", "#40e0d0"],
+    "speed": 3,
+    "angle": 45
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "GRADIENT FLOW", "value": "GRADIENT FLOW" },
+        { "label": "COLOR WAVE", "value": "COLOR WAVE" },
+        { "label": "RAINBOW TEXT", "value": "RAINBOW TEXT" },
+        { "label": "VIBRANT", "value": "VIBRANT" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Flow Speed",
+      "type": "range",
+      "min": 1,
+      "max": 10,
+      "step": 0.5,
+      "unit": "s"
+    },
+    {
+      "name": "angle",
+      "label": "Gradient Angle",
+      "type": "range",
+      "min": 0,
+      "max": 360,
+      "step": 15,
+      "unit": "°"
+    }
+  ]
+},
+{
+  "id": "scramble-text",
+  "label": "Scramble Text",
+  "componentPath": "ScrambleText",
+  "icon": "Shuffle",
+  "description": "Random character scramble reveal effect",
+  "defaultProps": {
+    "text": "SCRAMBLED",
+    "speed": 50,
+    "scrambleSpeed": 20,
+    "characters": "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;:,.<>?/"
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "SCRAMBLED", "value": "SCRAMBLED" },
+        { "label": "DECRYPTING", "value": "DECRYPTING" },
+        { "label": "HACKING...", "value": "HACKING..." },
+        { "label": "UNLOCKED", "value": "UNLOCKED" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Animation Speed",
+      "type": "range",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "ms"
+    },
+    {
+      "name": "scrambleSpeed",
+      "label": "Scramble Intensity",
+      "type": "range",
+      "min": 5,
+      "max": 40,
+      "step": 5,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "pulse-text",
+  "label": "Pulse Text",
+  "componentPath": "PulseText",
+  "icon": "Radio",
+  "description": "Rhythmic pulsing scale animation",
+  "defaultProps": {
+    "text": "PULSE",
+    "scale": 1.2,
+    "speed": 0.8,
+    "stagger": true
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "PULSE", "value": "PULSE" },
+        { "label": "HEARTBEAT", "value": "HEARTBEAT" },
+        { "label": "RHYTHM", "value": "RHYTHM" },
+        { "label": "THROB", "value": "THROB" }
+      ]
+    },
+    {
+      "name": "scale",
+      "label": "Pulse Scale",
+      "type": "range",
+      "min": 1.1,
+      "max": 2,
+      "step": 0.1,
+      "unit": "x"
+    },
+    {
+      "name": "speed",
+      "label": "Pulse Speed",
+      "type": "range",
+      "min": 0.3,
+      "max": 2,
+      "step": 0.1,
+      "unit": "s"
+    },
+    {
+      "name": "stagger",
+      "label": "Stagger Letters",
+      "type": "toggle"
+    }
+  ]
+},
+{
+  "id": "scatter-assemble",
+  "label": "Scatter Assemble",
+  "componentPath": "ScatterAssemble",
+  "icon": "BoxSelect",
+  "description": "Characters fly in from random coordinates to form text",
+  "defaultProps": {
+    "text": "ASSEMBLE",
+    "scatterRange": 300,
+    "duration": 0.8,
+    "stagger": 0.03
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "ASSEMBLE", "value": "ASSEMBLE" },
+        { "label": "GATHER", "value": "GATHER" },
+        { "label": "UNITE", "value": "UNITE" },
+        { "label": "CONVERGE", "value": "CONVERGE" }
+      ]
+    },
+    {
+      "name": "scatterRange",
+      "label": "Scatter Area",
+      "type": "range",
+      "min": 50,
+      "max": 500,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "stagger",
+      "label": "Letter Stagger",
+      "type": "range",
+      "min": 0.01,
+      "max": 0.1,
+      "step": 0.01,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "spotlight-text",
+  "label": "Spotlight Text",
+  "componentPath": "SpotlightText",
+  "icon": "Search",
+  "description": "Interactive mask that reveals text under the mouse cursor",
+  "defaultProps": {
+    "text": "HIDDEN TRUTH",
+    "radius": 120,
+    "spotlightColor": "rgba(255,255,255,0.5)"
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "HIDDEN TRUTH", "value": "HIDDEN TRUTH" },
+        { "label": "SECRET MESSAGE", "value": "SECRET MESSAGE" },
+        { "label": "REVEAL", "value": "REVEAL" },
+        { "label": "MYSTERY", "value": "MYSTERY" }
+      ]
+    },
+    {
+      "name": "radius",
+      "label": "Spotlight Radius",
+      "type": "range",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "spotlightColor",
+      "label": "Glow Color",
+      "type": "select",
+      "options": [
+        { "label": "White", "value": "rgba(255,255,255,0.5)" },
+        { "label": "Cyan", "value": "rgba(0,255,255,0.5)" },
+        { "label": "Pink", "value": "rgba(255,0,255,0.5)" },
+        { "label": "Yellow", "value": "rgba(255,255,0,0.5)" }
+      ]
+    }
+  ]
+},
+{
+  "id": "liquid-text",
+  "label": "Liquid Text",
+  "componentPath": "LiquidText",
+  "icon": "Droplet",
+  "description": "Gooey liquid morphing effect with drips",
+  "defaultProps": {
+    "text": "LIQUID",
+    "viscosity": 15,
+    "amplitude": 15,
+    "speed": 3
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "LIQUID", "value": "LIQUID" },
+        { "label": "MELT", "value": "MELT" },
+        { "label": "DRIP DROP", "value": "DRIP DROP" },
+        { "label": "GOOEY", "value": "GOOEY" }
+      ]
+    },
+    {
+      "name": "viscosity",
+      "label": "Liquid Viscosity",
+      "type": "range",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "unit": ""
+    },
+    {
+      "name": "amplitude",
+      "label": "Wave Height",
+      "type": "range",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Animation Speed",
+      "type": "range",
+      "min": 1,
+      "max": 6,
+      "step": 0.5,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "magnetic-text",
+  "label": "Magnetic Text",
+  "componentPath": "MagneticText",
+  "icon": "Magnet",
+  "description": "Letters follow cursor with magnetic attraction",
+  "defaultProps": {
+    "text": "MAGNETIC",
+    "strength": 0.5
+  },
+  "controls": [
+    {
+      "name": "text",
+      "label": "Text Content",
+      "type": "select",
+      "options": [
+        { "label": "MAGNETIC", "value": "MAGNETIC" },
+        { "label": "PULL ME", "value": "PULL ME" },
+        { "label": "ATTRACT", "value": "ATTRACT" },
+        { "label": "FOLLOW", "value": "FOLLOW" }
+      ]
+    },
+    {
+      "name": "strength",
+      "label": "Magnetic Force",
+      "type": "range",
+      "min": 0.1,
+      "max": 2,
+      "step": 0.1,
+      "unit": ""
+    }
+  ]
+}
+]

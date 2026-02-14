@@ -1,0 +1,891 @@
+[
+    {
+  "id": "pulse-loader",
+  "label": "Pulse Loader",
+  "componentPath": "PulseLoader",
+  "icon": "Loader",
+  "description": "Glowing pulsing dots with staggered animation",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 16,
+    "dotCount": 3,
+    "speed": 0.8
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Dot Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Dot Size",
+      "type": "range",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "name": "dotCount",
+      "label": "Dot Count",
+      "type": "range",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "speed",
+      "label": "Pulse Speed",
+      "type": "range",
+      "min": 0.4,
+      "max": 2,
+      "step": 0.2,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "orbit-loader",
+  "label": "Orbit Loader",
+  "componentPath": "OrbitLoader",
+  "icon": "RefreshCw",
+  "description": "Planets orbiting a glowing core",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 80,
+    "orbitCount": 3,
+    "speed": 2
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Loader Size",
+      "type": "range",
+      "min": 40,
+      "max": 160,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "orbitCount",
+      "label": "Orbit Count",
+      "type": "range",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "speed",
+      "label": "Orbit Speed",
+      "type": "range",
+      "min": 0.5,
+      "max": 5,
+      "step": 0.5,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "morph-loader",
+  "label": "Morph Loader",
+  "componentPath": "MorphLoader",
+  "icon": "Shapes",
+  "description": "Fluid shape morphing animation",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 80,
+    "speed": 2
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Emerald", "value": "#10b981" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Size",
+      "type": "range",
+      "min": 40,
+      "max": 160,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Morph Speed",
+      "type": "range",
+      "min": 0.5,
+      "max": 5,
+      "step": 0.5,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "dna-loader",
+  "label": "DNA Loader",
+  "componentPath": "DNALoader",
+  "icon": "Dna",
+  "description": "Double helix DNA strand animation",
+  "defaultProps": {
+    "color": "#6366f1",
+    "secondColor": "#06b6d4",
+    "dotCount": 8,
+    "speed": 1.5,
+    "size": 12
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Strand 1 Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" },
+        { "label": "Emerald", "value": "#10b981" }
+      ]
+    },
+    {
+      "name": "secondColor",
+      "label": "Strand 2 Color",
+      "type": "select",
+      "options": [
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Purple", "value": "#a855f7" },
+        { "label": "Rose", "value": "#f43f5e" },
+        { "label": "Sky", "value": "#0ea5e9" }
+      ]
+    },
+    {
+      "name": "dotCount",
+      "label": "Strand Length",
+      "type": "range",
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "speed",
+      "label": "Helix Speed",
+      "type": "range",
+      "min": 0.5,
+      "max": 3,
+      "step": 0.5,
+      "unit": "s"
+    },
+    {
+      "name": "size",
+      "label": "Dot Size",
+      "type": "range",
+      "min": 6,
+      "max": 24,
+      "step": 2,
+      "unit": "px"
+    }
+  ]
+},
+{
+  "id": "progress-loader",
+  "label": "Progress Loader",
+  "componentPath": "ProgressLoader",
+  "icon": "GaugeCircle",
+  "description": "Animated progress bar with shimmer effect",
+  "defaultProps": {
+    "color": "#6366f1",
+    "height": 8,
+    "speed": 2,
+    "showPercent": true,
+    "loop": true
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Emerald", "value": "#10b981" }
+      ]
+    },
+    {
+      "name": "height",
+      "label": "Bar Height",
+      "type": "range",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Fill Speed",
+      "type": "range",
+      "min": 0.5,
+      "max": 5,
+      "step": 0.5,
+      "unit": "s"
+    },
+    {
+      "name": "showPercent",
+      "label": "Show Percent",
+      "type": "toggle"
+    },
+    {
+      "name": "loop",
+      "label": "Loop",
+      "type": "toggle"
+    }
+  ]
+},
+{
+  "id": "ring-loader",
+  "label": "Ring Loader",
+  "componentPath": "RingLoader",
+  "icon": "RefreshCw",
+  "description": "Concentric spinning rings with glow center",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 80,
+    "thickness": 6,
+    "speed": 1.2,
+    "segments": 3
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Size",
+      "type": "range",
+      "min": 40,
+      "max": 160,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "thickness",
+      "label": "Ring Thickness",
+      "type": "range",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Spin Speed",
+      "type": "range",
+      "min": 0.5,
+      "max": 3,
+      "step": 0.1,
+      "unit": "s"
+    },
+    {
+      "name": "segments",
+      "label": "Ring Count",
+      "type": "range",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "skeleton-loader",
+  "label": "Skeleton Loader",
+  "componentPath": "SkeletonLoader",
+  "icon": "LayoutDashboard",
+  "description": "Content placeholder with shimmer animation",
+  "defaultProps": {
+    "color": "#27272a",
+    "shimmerColor": "rgba(255,255,255,0.06)",
+    "speed": 1.5,
+    "rows": 3,
+    "showAvatar": true
+  },
+  "controls": [
+    {
+      "name": "speed",
+      "label": "Shimmer Speed",
+      "type": "range",
+      "min": 0.5,
+      "max": 3,
+      "step": 0.5,
+      "unit": "s"
+    },
+    {
+      "name": "rows",
+      "label": "Content Rows",
+      "type": "range",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "showAvatar",
+      "label": "Show Avatar",
+      "type": "toggle"
+    }
+  ]
+},
+{
+  "id": "wave-loader",
+  "label": "Wave Loader",
+  "componentPath": "WaveLoader",
+  "icon": "BarChart2",
+  "description": "Equalizer-style animated wave bars",
+  "defaultProps": {
+    "color": "#6366f1",
+    "barCount": 8,
+    "speed": 0.6,
+    "height": 60,
+    "gap": 4
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Bar Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Emerald", "value": "#10b981" }
+      ]
+    },
+    {
+      "name": "barCount",
+      "label": "Bar Count",
+      "type": "range",
+      "min": 3,
+      "max": 16,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "speed",
+      "label": "Wave Speed",
+      "type": "range",
+      "min": 0.2,
+      "max": 2,
+      "step": 0.1,
+      "unit": "s"
+    },
+    {
+      "name": "height",
+      "label": "Max Height",
+      "type": "range",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    }
+  ]
+},
+{
+  "id": "grid-loader",
+  "label": "Grid Loader",
+  "componentPath": "GridLoader",
+  "icon": "Grid3x3",
+  "description": "3x3 grid squares pulsing in sequence",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 20,
+    "gap": 4,
+    "speed": 0.8
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Emerald", "value": "#10b981" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Cell Size",
+      "type": "range",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "name": "gap",
+      "label": "Gap",
+      "type": "range",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Speed",
+      "type": "range",
+      "min": 0.3,
+      "max": 2,
+      "step": 0.1,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "chasing-dots-loader",
+  "label": "Chasing Dots",
+  "componentPath": "ChasingDotsLoader",
+  "icon": "RotateCw",
+  "description": "Dots chasing each other in a circle",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 80,
+    "dotCount": 8,
+    "speed": 1.5
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Size",
+      "type": "range",
+      "min": 40,
+      "max": 160,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "dotCount",
+      "label": "Dot Count",
+      "type": "range",
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "speed",
+      "label": "Chase Speed",
+      "type": "range",
+      "min": 0.5,
+      "max": 3,
+      "step": 0.1,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "infinity-loader",
+  "label": "Infinity Loader",
+  "componentPath": "InfinityLoader",
+  "icon": "Infinity",
+  "description": "Glowing dot tracing an infinity symbol",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 120,
+    "speed": 2.5,
+    "thickness": 3
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Size",
+      "type": "range",
+      "min": 60,
+      "max": 200,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Trace Speed",
+      "type": "range",
+      "min": 1,
+      "max": 5,
+      "step": 0.5,
+      "unit": "s"
+    },
+    {
+      "name": "thickness",
+      "label": "Line Thickness",
+      "type": "range",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "unit": "px"
+    }
+  ]
+},
+{
+  "id": "typewriter-loader",
+  "label": "Typewriter Loader",
+  "componentPath": "TypewriterLoader",
+  "icon": "Type",
+  "description": "Cycling typewriter messages with cursor",
+  "defaultProps": {
+    "color": "#6366f1",
+    "messages": ["Loading...", "Please wait...", "Almost there...", "Hang tight..."],
+    "speed": 80,
+    "showCursor": true
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Text Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Emerald", "value": "#10b981" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Typing Speed",
+      "type": "range",
+      "min": 40,
+      "max": 200,
+      "step": 10,
+      "unit": "ms"
+    },
+    {
+      "name": "showCursor",
+      "label": "Show Cursor",
+      "type": "toggle"
+    }
+  ]
+},
+{
+  "id": "particle-ring-loader",
+  "label": "Particle Ring",
+  "componentPath": "ParticleRingLoader",
+  "icon": "Circle",
+  "description": "Particles pulsing in a ring formation",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 80,
+    "particleCount": 12,
+    "speed": 2
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Ring Size",
+      "type": "range",
+      "min": 40,
+      "max": 160,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "particleCount",
+      "label": "Particle Count",
+      "type": "range",
+      "min": 6,
+      "max": 24,
+      "step": 2,
+      "unit": ""
+    },
+    {
+      "name": "speed",
+      "label": "Pulse Speed",
+      "type": "range",
+      "min": 0.5,
+      "max": 4,
+      "step": 0.5,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "bouncing-bar-loader",
+  "label": "Bouncing Bar Loader",
+  "componentPath": "BouncingBarLoader",
+  "icon": "AlignCenter",
+  "description": "Bouncing bars with elastic animation",
+  "defaultProps": {
+    "color": "#6366f1",
+    "barCount": 5,
+    "speed": 0.7,
+    "height": 60,
+    "width": 8
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "barCount",
+      "label": "Bar Count",
+      "type": "range",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "height",
+      "label": "Max Height",
+      "type": "range",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Bounce Speed",
+      "type": "range",
+      "min": 0.3,
+      "max": 2,
+      "step": 0.1,
+      "unit": "s"
+    },
+    {
+      "name": "width",
+      "label": "Bar Width",
+      "type": "range",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "unit": "px"
+    }
+  ]
+},
+{
+  "id": "glitch-loader",
+  "label": "Glitch Loader",
+  "componentPath": "GlitchLoader",
+  "icon": "Zap",
+  "description": "Cyberpunk glitching LOADING text",
+  "defaultProps": {
+    "color": "#6366f1",
+    "speed": 0.3,
+    "intensity": 6
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#00ffff" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Green", "value": "#00ff00" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Glitch Rate",
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "unit": "s"
+    },
+    {
+      "name": "intensity",
+      "label": "Glitch Intensity",
+      "type": "range",
+      "min": 2,
+      "max": 16,
+      "step": 1,
+      "unit": "px"
+    }
+  ]
+},
+{
+  "id": "spiral-loader",
+  "label": "Spiral Loader",
+  "componentPath": "SpiralLoader",
+  "icon": "Loader2",
+  "description": "Spiral path drawing and unraveling",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 100,
+    "speed": 3,
+    "turns": 3
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Size",
+      "type": "range",
+      "min": 60,
+      "max": 200,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Draw Speed",
+      "type": "range",
+      "min": 1,
+      "max": 6,
+      "step": 0.5,
+      "unit": "s"
+    },
+    {
+      "name": "turns",
+      "label": "Spiral Turns",
+      "type": "range",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "flip-card-loader",
+  "label": "Flip Card Loader",
+  "componentPath": "FlipCardLoader",
+  "icon": "CreditCard",
+  "description": "Cards flipping in sequence like a deck",
+  "defaultProps": {
+    "color": "#6366f1",
+    "cardCount": 4,
+    "size": 20,
+    "speed": 1.2
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "cardCount",
+      "label": "Card Count",
+      "type": "range",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "size",
+      "label": "Card Size",
+      "type": "range",
+      "min": 12,
+      "max": 40,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Flip Speed",
+      "type": "range",
+      "min": 0.5,
+      "max": 3,
+      "step": 0.1,
+      "unit": "s"
+    }
+  ]
+}
+]

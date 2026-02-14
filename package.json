@@ -1,0 +1,62 @@
+{
+  "name": "@volt-ui/react",
+  "version": "0.1.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "private": false,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint",
+    "build:lib": "tsup"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@react-three/drei": "^10.7.5",
+    "@react-three/fiber": "^9.3.0",
+    "@studio-freight/lenis": "^1.0.42",
+    "@types/three": "^0.180.0",
+    "@vercel/speed-insights": "^1.3.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cobe": "^0.6.5",
+    "framer-motion": "^12.34.0",
+    "gl-matrix": "^3.4.4",
+    "gsap": "^3.13.0",
+    "hamburger-react": "^2.5.2",
+    "lenis": "^1.3.11",
+    "locomotive-scroll": "^4.1.4",
+    "lucide-react": "^0.542.0",
+    "mathjs": "^14.7.0",
+    "motion": "^12.23.25",
+    "next": "^16.0.8",
+    "nodemailer": "^7.0.11",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-icons": "^5.5.0",
+    "rough-notation": "^0.5.1",
+    "tailwind-merge": "^3.4.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/nodemailer": "^7.0.4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "baseline-browser-mapping": "^2.9.19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
+    "tailwindcss": "^4",
+    "tsup": "^8.5.1",
+    "tw-animate-css": "^1.3.8",
+    "typescript": "^5"
+  }
+}

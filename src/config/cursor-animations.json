@@ -1,0 +1,511 @@
+[
+    {
+  "id": "trail-cursor",
+  "label": "Trail Cursor",
+  "componentPath": "TrailCursor",
+  "icon": "MousePointer2",
+  "description": "Glowing particle trail that follows the cursor",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 8,
+    "trailLength": 12,
+    "speed": 0.3
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Trail Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Trail Size",
+      "type": "range",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "name": "trailLength",
+      "label": "Trail Length",
+      "type": "range",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "speed",
+      "label": "Fade Speed",
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "magnetic-cursor",
+  "label": "Magnetic Cursor",
+  "componentPath": "MagneticCursor",
+  "icon": "Magnet",
+  "description": "Custom cursor with magnetic snap to interactive elements",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 12,
+    "strength": 0.3,
+    "ringSize": 36
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Cursor Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Dot Size",
+      "type": "range",
+      "min": 6,
+      "max": 20,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "name": "ringSize",
+      "label": "Ring Size",
+      "type": "range",
+      "min": 24,
+      "max": 64,
+      "step": 4,
+      "unit": "px"
+    },
+    {
+      "name": "strength",
+      "label": "Magnetic Strength",
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "ripple-cursor",
+  "label": "Ripple Cursor",
+  "componentPath": "RippleCursor",
+  "icon": "MousePointer",
+  "description": "Expanding ripple rings on mouse click",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 80,
+    "duration": 0.8,
+    "rippleCount": 3
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Ripple Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Ripple Size",
+      "type": "range",
+      "min": 40,
+      "max": 200,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "duration",
+      "label": "Ripple Duration",
+      "type": "range",
+      "min": 0.3,
+      "max": 2,
+      "step": 0.1,
+      "unit": "s"
+    },
+    {
+      "name": "rippleCount",
+      "label": "Ripple Rings",
+      "type": "range",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "spotlight-cursor",
+  "label": "Spotlight Cursor",
+  "componentPath": "SpotlightCursor",
+  "icon": "Sun",
+  "description": "Soft glowing spotlight that follows the cursor",
+  "defaultProps": {
+    "color": "#6366f1",
+    "size": 300,
+    "blur": 80,
+    "opacity": 0.15
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Spotlight Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Spotlight Size",
+      "type": "range",
+      "min": 100,
+      "max": 600,
+      "step": 50,
+      "unit": "px"
+    },
+    {
+      "name": "blur",
+      "label": "Blur Amount",
+      "type": "range",
+      "min": 20,
+      "max": 150,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "opacity",
+      "label": "Intensity",
+      "type": "range",
+      "min": 0.05,
+      "max": 0.5,
+      "step": 0.05,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "emoji-cursor",
+  "label": "Emoji Cursor",
+  "componentPath": "EmojiCursor",
+  "icon": "Smile",
+  "description": "Emojis explode and scatter from the cursor",
+  "defaultProps": {
+    "emojis": ["🔥", "⚡", "✨", "💥", "🌟"],
+    "rate": 3,
+    "size": 20,
+    "spread": 80
+  },
+  "controls": [
+    {
+      "name": "rate",
+      "label": "Spawn Rate",
+      "type": "range",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "size",
+      "label": "Emoji Size",
+      "type": "range",
+      "min": 12,
+      "max": 40,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "name": "spread",
+      "label": "Spread Distance",
+      "type": "range",
+      "min": 20,
+      "max": 150,
+      "step": 10,
+      "unit": "px"
+    }
+  ]
+},
+{
+  "id": "string-cursor",
+  "label": "String Cursor",
+  "componentPath": "StringCursor",
+  "icon": "Minus",
+  "description": "Elastic string that stretches and follows the cursor",
+  "defaultProps": {
+    "color": "#6366f1",
+    "thickness": 2,
+    "elasticity": 0.15,
+    "nodes": 12
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "String Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "thickness",
+      "label": "String Thickness",
+      "type": "range",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "name": "elasticity",
+      "label": "Elasticity",
+      "type": "range",
+      "min": 0.05,
+      "max": 0.5,
+      "step": 0.05,
+      "unit": ""
+    },
+    {
+      "name": "nodes",
+      "label": "String Segments",
+      "type": "range",
+      "min": 5,
+      "max": 24,
+      "step": 1,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "web-cursor",
+  "label": "Web Cursor",
+  "componentPath": "WebCursor",
+  "icon": "Network",
+  "description": "Spider web that stretches from edges to cursor",
+  "defaultProps": {
+    "color": "#6366f1",
+    "thickness": 1,
+    "points": 8
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Web Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "White", "value": "#ffffff" }
+      ]
+    },
+    {
+      "name": "thickness",
+      "label": "Web Thickness",
+      "type": "range",
+      "min": 0.5,
+      "max": 3,
+      "step": 0.5,
+      "unit": "px"
+    },
+    {
+      "name": "points",
+      "label": "Anchor Points",
+      "type": "range",
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "gravity-cursor",
+  "label": "Gravity Cursor",
+  "componentPath": "GravityCursor",
+  "icon": "CircleDot",
+  "description": "Floating dots attracted toward the cursor like gravity",
+  "defaultProps": {
+    "color": "#6366f1",
+    "dotCount": 40,
+    "gravity": 0.3,
+    "dotSize": 3
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Dot Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "dotCount",
+      "label": "Dot Count",
+      "type": "range",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": ""
+    },
+    {
+      "name": "gravity",
+      "label": "Gravity Strength",
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "unit": ""
+    },
+    {
+      "name": "dotSize",
+      "label": "Dot Size",
+      "type": "range",
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "unit": "px"
+    }
+  ]
+},
+{
+  "id": "ink-cursor",
+  "label": "Ink Cursor",
+  "componentPath": "InkCursor",
+  "icon": "Pen",
+  "description": "Click and drag to paint ink splatters on canvas",
+  "defaultProps": {
+    "color": "#6366f1",
+    "opacity": 0.6,
+    "size": 20,
+    "speed": 5
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Ink Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Crimson", "value": "#dc2626" }
+      ]
+    },
+    {
+      "name": "size",
+      "label": "Brush Size",
+      "type": "range",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "name": "opacity",
+      "label": "Ink Opacity",
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "unit": ""
+    },
+    {
+      "name": "speed",
+      "label": "Ink Flow",
+      "type": "range",
+      "min": 1,
+      "max": 15,
+      "step": 1,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "black-hole-cursor",
+  "label": "Black Hole Cursor",
+  "componentPath": "BlackHoleCursor",
+  "icon": "CircleDot",
+  "description": "Vortex black hole that sucks and orbits particles",
+  "defaultProps": {
+    "color": "#6366f1",
+    "particleCount": 60,
+    "suckStrength": 0.5,
+    "particleSize": 2
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Particle Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "particleCount",
+      "label": "Particle Count",
+      "type": "range",
+      "min": 20,
+      "max": 120,
+      "step": 10,
+      "unit": ""
+    },
+    {
+      "name": "suckStrength",
+      "label": "Suck Strength",
+      "type": "range",
+      "min": 0.1,
+      "max": 2,
+      "step": 0.1,
+      "unit": ""
+    },
+    {
+      "name": "particleSize",
+      "label": "Particle Size",
+      "type": "range",
+      "min": 1,
+      "max": 5,
+      "step": 0.5,
+      "unit": "px"
+    }
+  ]
+}
+]

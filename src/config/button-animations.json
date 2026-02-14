@@ -1,0 +1,474 @@
+[
+    {
+  "id": "ripple-button",
+  "label": "Ripple Button",
+  "componentPath": "RippleButton",
+  "icon": "Circle",
+  "description": "Material Design ripple effect on click",
+  "defaultProps": {
+    "children": "Click Me",
+    "color": "#3b82f6",
+    "rippleColor": "rgba(255, 255, 255, 0.6)"
+  },
+  "controls": [
+    {
+      "name": "children",
+      "label": "Button Text",
+      "type": "select",
+      "options": [
+        { "label": "Click Me", "value": "Click Me" },
+        { "label": "Submit", "value": "Submit" },
+        { "label": "Get Started", "value": "Get Started" },
+        { "label": "Learn More", "value": "Learn More" }
+      ]
+    },
+    {
+      "name": "color",
+      "label": "Button Color",
+      "type": "select",
+      "options": [
+        { "label": "Blue", "value": "#3b82f6" },
+        { "label": "Purple", "value": "#a855f7" },
+        { "label": "Green", "value": "#22c55e" },
+        { "label": "Red", "value": "#ef4444" }
+      ]
+    },
+    {
+      "name": "rippleColor",
+      "label": "Ripple Color",
+      "type": "select",
+      "options": [
+        { "label": "White", "value": "rgba(255, 255, 255, 0.6)" },
+        { "label": "Black", "value": "rgba(0, 0, 0, 0.3)" },
+        { "label": "Cyan", "value": "rgba(0, 255, 255, 0.5)" },
+        { "label": "Yellow", "value": "rgba(255, 255, 0, 0.5)" }
+      ]
+    }
+  ]
+},
+{
+  "id": "magnetic-button",
+  "label": "Magnetic Button",
+  "componentPath": "MagneticButton",
+  "icon": "Magnet",
+  "description": "Button follows cursor with magnetic pull",
+  "defaultProps": {
+    "children": "Hover Me",
+    "strength": 0.3,
+    "color": "#3b82f6"
+  },
+  "controls": [
+    {
+      "name": "children",
+      "label": "Button Text",
+      "type": "select",
+      "options": [
+        { "label": "Hover Me", "value": "Hover Me" },
+        { "label": "Magnetic", "value": "Magnetic" },
+        { "label": "Pull Me", "value": "Pull Me" },
+        { "label": "Follow", "value": "Follow" }
+      ]
+    },
+    {
+      "name": "strength",
+      "label": "Magnetic Force",
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "unit": ""
+    },
+    {
+      "name": "color",
+      "label": "Button Color",
+      "type": "select",
+      "options": [
+        { "label": "Blue", "value": "#3b82f6" },
+        { "label": "Purple", "value": "#a855f7" },
+        { "label": "Green", "value": "#22c55e" },
+        { "label": "Pink", "value": "#ec4899" }
+      ]
+    }
+  ]
+},
+{
+  "id": "liquid-fill-button",
+  "label": "Liquid Fill Button",
+  "componentPath": "LiquidFillButton",
+  "icon": "Droplet",
+  "description": "Smooth liquid fill animation on hover",
+  "defaultProps": {
+    "children": "Hover Me",
+    "fillColor": "#3b82f6",
+    "textColor": "#ffffff",
+    "borderColor": "#3b82f6",
+    "speed": 0.4
+  },
+  "controls": [
+    {
+      "name": "children",
+      "label": "Button Text",
+      "type": "select",
+      "options": [
+        { "label": "Hover Me", "value": "Hover Me" },
+        { "label": "Fill Up", "value": "Fill Up" },
+        { "label": "Liquid", "value": "Liquid" },
+        { "label": "Click Here", "value": "Click Here" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Fill Speed",
+      "type": "range",
+      "min": 0.2,
+      "max": 1,
+      "step": 0.1,
+      "unit": "s"
+    },
+    {
+      "name": "fillColor",
+      "label": "Fill Color",
+      "type": "select",
+      "options": [
+        { "label": "Blue", "value": "#3b82f6" },
+        { "label": "Purple", "value": "#a855f7" },
+        { "label": "Green", "value": "#22c55e" },
+        { "label": "Orange", "value": "#f97316" }
+      ]
+    }
+  ]
+},
+{
+  "id": "shimmer-button",
+  "label": "Shimmer Button",
+  "componentPath": "ShimmerButton",
+  "icon": "Sparkles",
+  "description": "Continuous shimmer shine effect",
+  "defaultProps": {
+    "children": "Shimmer",
+    "color": "#3b82f6",
+    "shimmerColor": "rgba(255, 255, 255, 0.5)",
+    "speed": 2
+  },
+  "controls": [
+    {
+      "name": "children",
+      "label": "Button Text",
+      "type": "select",
+      "options": [
+        { "label": "Shimmer", "value": "Shimmer" },
+        { "label": "Shine", "value": "Shine" },
+        { "label": "Sparkle", "value": "Sparkle" },
+        { "label": "Glitter", "value": "Glitter" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Shimmer Speed",
+      "type": "range",
+      "min": 1,
+      "max": 5,
+      "step": 0.5,
+      "unit": "s"
+    },
+    {
+      "name": "color",
+      "label": "Button Color",
+      "type": "select",
+      "options": [
+        { "label": "Blue", "value": "#3b82f6" },
+        { "label": "Purple", "value": "#a855f7" },
+        { "label": "Gold", "value": "#fbbf24" },
+        { "label": "Pink", "value": "#ec4899" }
+      ]
+    }
+  ]
+},
+{
+  "id": "glow-pulse-button",
+  "label": "Glow Pulse Button",
+  "componentPath": "GlowPulseButton",
+  "icon": "Zap",
+  "description": "Pulsing glow shadow effect",
+  "defaultProps": {
+    "children": "Glow",
+    "color": "#3b82f6",
+    "glowColor": "#3b82f6",
+    "intensity": 20,
+    "speed": 2
+  },
+  "controls": [
+    {
+      "name": "children",
+      "label": "Button Text",
+      "type": "select",
+      "options": [
+        { "label": "Glow", "value": "Glow" },
+        { "label": "Pulse", "value": "Pulse" },
+        { "label": "Radiate", "value": "Radiate" },
+        { "label": "Shine", "value": "Shine" }
+      ]
+    },
+    {
+      "name": "intensity",
+      "label": "Glow Intensity",
+      "type": "range",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Pulse Speed",
+      "type": "range",
+      "min": 0.5,
+      "max": 4,
+      "step": 0.5,
+      "unit": "s"
+    },
+    {
+      "name": "color",
+      "label": "Button Color",
+      "type": "select",
+      "options": [
+        { "label": "Blue", "value": "#3b82f6" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Purple", "value": "#a855f7" },
+        { "label": "Pink", "value": "#ec4899" }
+      ]
+    }
+  ]
+},
+{
+  "id": "3d-press-button",
+  "label": "3D Press Button",
+  "componentPath": "PressButton",
+  "icon": "Hand",
+  "description": "Satisfying 3D button press effect",
+  "defaultProps": {
+    "children": "Press Me",
+    "color": "#3b82f6",
+    "shadowColor": "#1e40af",
+    "depth": 8
+  },
+  "controls": [
+    {
+      "name": "children",
+      "label": "Button Text",
+      "type": "select",
+      "options": [
+        { "label": "Press Me", "value": "Press Me" },
+        { "label": "Push", "value": "Push" },
+        { "label": "Click", "value": "Click" },
+        { "label": "Tap", "value": "Tap" }
+      ]
+    },
+    {
+      "name": "depth",
+      "label": "3D Depth",
+      "type": "range",
+      "min": 4,
+      "max": 16,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "name": "color",
+      "label": "Button Color",
+      "type": "select",
+      "options": [
+        { "label": "Blue", "value": "#3b82f6" },
+        { "label": "Green", "value": "#22c55e" },
+        { "label": "Red", "value": "#ef4444" },
+        { "label": "Purple", "value": "#a855f7" }
+      ]
+    }
+  ]
+},
+{
+  "id": "split-reveal-button",
+  "label": "Split Reveal Button",
+  "componentPath": "SplitRevealButton",
+  "icon": "ArrowUpDown",
+  "description": "Text slides and reveals on hover",
+  "defaultProps": {
+    "children": "Hover",
+    "hoverText": "Revealed!",
+    "color": "#3b82f6",
+    "hoverColor": "#8b5cf6",
+    "speed": 0.3
+  },
+  "controls": [
+    {
+      "name": "children",
+      "label": "Default Text",
+      "type": "select",
+      "options": [
+        { "label": "Hover", "value": "Hover" },
+        { "label": "Click", "value": "Click" },
+        { "label": "Start", "value": "Start" },
+        { "label": "Hello", "value": "Hello" }
+      ]
+    },
+    {
+      "name": "hoverText",
+      "label": "Hover Text",
+      "type": "select",
+      "options": [
+        { "label": "Revealed!", "value": "Revealed!" },
+        { "label": "Let's Go!", "value": "Let's Go!" },
+        { "label": "Begin", "value": "Begin" },
+        { "label": "World!", "value": "World!" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Reveal Speed",
+      "type": "range",
+      "min": 0.1,
+      "max": 0.8,
+      "step": 0.1,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "particle-button",
+  "label": "Particle Button",
+  "componentPath": "ParticleButton",
+  "icon": "Sparkles",
+  "description": "Particle explosion on click",
+  "defaultProps": {
+    "children": "Explode",
+    "color": "#3b82f6",
+    "particleColor": "#60a5fa",
+    "particleCount": 12
+  },
+  "controls": [
+    {
+      "name": "children",
+      "label": "Button Text",
+      "type": "select",
+      "options": [
+        { "label": "Explode", "value": "Explode" },
+        { "label": "Click Me", "value": "Click Me" },
+        { "label": "Boom", "value": "Boom" },
+        { "label": "Burst", "value": "Burst" }
+      ]
+    },
+    {
+      "name": "particleCount",
+      "label": "Particle Count",
+      "type": "range",
+      "min": 6,
+      "max": 24,
+      "step": 2,
+      "unit": ""
+    },
+    {
+      "name": "color",
+      "label": "Button Color",
+      "type": "select",
+      "options": [
+        { "label": "Blue", "value": "#3b82f6" },
+        { "label": "Purple", "value": "#a855f7" },
+        { "label": "Orange", "value": "#f97316" },
+        { "label": "Pink", "value": "#ec4899" }
+      ]
+    }
+  ]
+},
+{
+  "id": "border-glow-button",
+  "label": "Border Glow Button",
+  "componentPath": "BorderGlowButton",
+  "icon": "Square",
+  "description": "Animated glowing border effect",
+  "defaultProps": {
+    "children": "Glow Border",
+    "color": "#000000",
+    "glowColor": "#3b82f6",
+    "speed": 2
+  },
+  "controls": [
+    {
+      "name": "children",
+      "label": "Button Text",
+      "type": "select",
+      "options": [
+        { "label": "Glow Border", "value": "Glow Border" },
+        { "label": "Neon Edge", "value": "Neon Edge" },
+        { "label": "Light Ring", "value": "Light Ring" },
+        { "label": "Shine", "value": "Shine" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Glow Speed",
+      "type": "range",
+      "min": 1,
+      "max": 5,
+      "step": 0.5,
+      "unit": "s"
+    },
+    {
+      "name": "glowColor",
+      "label": "Glow Color",
+      "type": "select",
+      "options": [
+        { "label": "Blue", "value": "#3b82f6" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Purple", "value": "#a855f7" },
+        { "label": "Pink", "value": "#ec4899" }
+      ]
+    }
+  ]
+},
+{
+  "id": "expand-button",
+  "label": "Expand Button",
+  "componentPath": "ExpandButton",
+  "icon": "ArrowRight",
+  "description": "Button expands with additional text on hover",
+  "defaultProps": {
+    "children": "Hover",
+    "expandedText": "See More",
+    "color": "#3b82f6",
+    "speed": 0.3
+  },
+  "controls": [
+    {
+      "name": "children",
+      "label": "Button Text",
+      "type": "select",
+      "options": [
+        { "label": "Hover", "value": "Hover" },
+        { "label": "Click", "value": "Click" },
+        { "label": "Learn", "value": "Learn" },
+        { "label": "View", "value": "View" }
+      ]
+    },
+    {
+      "name": "expandedText",
+      "label": "Expanded Text",
+      "type": "select",
+      "options": [
+        { "label": "See More", "value": "See More" },
+        { "label": "Get Started", "value": "Get Started" },
+        { "label": "Read More", "value": "Read More" },
+        { "label": "Explore", "value": "Explore" }
+      ]
+    },
+    {
+      "name": "speed",
+      "label": "Expand Speed",
+      "type": "range",
+      "min": 0.2,
+      "max": 0.8,
+      "step": 0.1,
+      "unit": "s"
+    }
+  ]
+}
+]

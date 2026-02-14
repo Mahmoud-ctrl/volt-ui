@@ -1,0 +1,968 @@
+[
+   {
+  "id": "gradient-waves",
+  "label": "Gradient Waves",
+  "componentPath": "GradientWaves",
+  "icon": "Waves",
+  "description": "Smooth flowing gradient blobs perfect for hero sections",
+  "defaultProps": {
+    "primaryColor": "#6366f1",
+    "secondaryColor": "#8b5cf6",
+    "accentColor": "#ec4899",
+    "waveCount": 3,
+    "speed": 20,
+    "blur": 100
+  },
+  "controls": [
+    {
+      "name": "primaryColor",
+      "label": "Primary Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "secondaryColor",
+      "label": "Secondary Color",
+      "type": "select",
+      "options": [
+        { "label": "Purple", "value": "#8b5cf6" },
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Teal", "value": "#14b8a6" },
+        { "label": "Rose", "value": "#f43f5e" }
+      ]
+    },
+    {
+      "name": "accentColor",
+      "label": "Accent Color",
+      "type": "select",
+      "options": [
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Amber", "value": "#f59e0b" },
+        { "label": "Emerald", "value": "#10b981" }
+      ]
+    },
+    {
+      "name": "waveCount",
+      "label": "Blob Count",
+      "type": "range",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "speed",
+      "label": "Animation Speed",
+      "type": "range",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "s"
+    },
+    {
+      "name": "blur",
+      "label": "Blur Amount",
+      "type": "range",
+      "min": 60,
+      "max": 150,
+      "step": 10,
+      "unit": "px"
+    }
+  ]
+},
+{
+  "id": "dot-matrix",
+  "label": "Dot Matrix",
+  "componentPath": "DotMatrix",
+  "icon": "Grid",
+  "description": "Pulsing dot grid with wave propagation effect",
+  "defaultProps": {
+    "dotColor": "#6366f1",
+    "glowColor": "#8b5cf6",
+    "dotSize": 2,
+    "spacing": 30,
+    "waveSpeed": 3
+  },
+  "controls": [
+    {
+      "name": "dotColor",
+      "label": "Dot Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "glowColor",
+      "label": "Glow Color",
+      "type": "select",
+      "options": [
+        { "label": "Purple", "value": "#8b5cf6" },
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Teal", "value": "#14b8a6" },
+        { "label": "Rose", "value": "#f43f5e" }
+      ]
+    },
+    {
+      "name": "dotSize",
+      "label": "Dot Size",
+      "type": "range",
+      "min": 1,
+      "max": 4,
+      "step": 0.5,
+      "unit": "px"
+    },
+    {
+      "name": "spacing",
+      "label": "Grid Spacing",
+      "type": "range",
+      "min": 20,
+      "max": 50,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "name": "waveSpeed",
+      "label": "Wave Speed",
+      "type": "range",
+      "min": 1,
+      "max": 5,
+      "step": 0.5,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "aurora-beam",
+  "label": "Aurora Beam",
+  "componentPath": "AuroraBeam",
+  "icon": "Zap",
+  "description": "Sci-fi scanning beams with 3D parallax tilt effect",
+  "defaultProps": {
+    "beamColor1": "#06b6d4",
+    "beamColor2": "#8b5cf6",
+    "beamColor3": "#ec4899",
+    "intensity": 0.7,
+    "speed": 8
+  },
+  "controls": [
+    {
+      "name": "beamColor1",
+      "label": "Beam Color 1",
+      "type": "select",
+      "options": [
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Emerald", "value": "#10b981" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "beamColor2",
+      "label": "Beam Color 2",
+      "type": "select",
+      "options": [
+        { "label": "Purple", "value": "#8b5cf6" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Blue", "value": "#3b82f6" },
+        { "label": "Teal", "value": "#14b8a6" }
+      ]
+    },
+    {
+      "name": "beamColor3",
+      "label": "Beam Color 3",
+      "type": "select",
+      "options": [
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Orange", "value": "#f97316" },
+        { "label": "Violet", "value": "#7c3aed" },
+        { "label": "Rose", "value": "#f43f5e" }
+      ]
+    },
+    {
+      "name": "intensity",
+      "label": "Beam Intensity",
+      "type": "range",
+      "min": 0.3,
+      "max": 1,
+      "step": 0.1,
+      "unit": ""
+    },
+    {
+      "name": "speed",
+      "label": "Animation Speed",
+      "type": "range",
+      "min": 4,
+      "max": 15,
+      "step": 1,
+      "unit": "s"
+    }
+  ]
+},
+{
+  "id": "particle-constellation-background",
+  "label": "Particle Constellation",
+  "componentPath": "ParticleConstellationBackground",
+  "icon": "Stars",
+  "description": "Interactive particle constellation with mouse connections",
+  "defaultProps": {
+    "color": "#6366f1",
+    "particleCount": 80,
+    "connectionDistance": 120,
+    "speed": 0.5,
+    "particleSize": 2
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Star Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "particleCount",
+      "label": "Star Count",
+      "type": "range",
+      "min": 20,
+      "max": 150,
+      "step": 10,
+      "unit": ""
+    },
+    {
+      "name": "connectionDistance",
+      "label": "Connection Distance",
+      "type": "range",
+      "min": 60,
+      "max": 200,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Float Speed",
+      "type": "range",
+      "min": 0.1,
+      "max": 2,
+      "step": 0.1,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "mesh-gradient-background",
+  "label": "Mesh Gradient",
+  "componentPath": "MeshGradientBackground",
+  "icon": "Palette",
+  "description": "Fluid morphing mesh gradient with mouse interaction",
+  "defaultProps": {
+    "colors": ["#6366f1", "#ec4899", "#f59e0b", "#10b981"],
+    "speed": 10,
+    "blur": 100,
+    "interactive": true
+  },
+  "controls": [
+    {
+      "name": "speed",
+      "label": "Morph Speed",
+      "type": "range",
+      "min": 4,
+      "max": 25,
+      "step": 1,
+      "unit": "s"
+    },
+    {
+      "name": "blur",
+      "label": "Blur Amount",
+      "type": "range",
+      "min": 40,
+      "max": 180,
+      "step": 10,
+      "unit": "px"
+    },
+    {
+      "name": "interactive",
+      "label": "Mouse Interactive",
+      "type": "toggle"
+    }
+  ]
+},
+{
+  "id": "matrix-rain-background",
+  "label": "Matrix Rain",
+  "componentPath": "MatrixRainBackground",
+  "icon": "Code",
+  "description": "Digital matrix rain falling characters",
+  "defaultProps": {
+    "color": "#00ff00",
+    "fontSize": 14,
+    "speed": 50,
+    "density": 0.7
+  },
+  "controls": [
+    {
+      "name": "fontSize",
+      "label": "Character Size",
+      "type": "range",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Rain Speed",
+      "type": "range",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "ms"
+    },
+    {
+      "name": "density",
+      "label": "Rain Density",
+      "type": "range",
+      "min": 0.3,
+      "max": 1,
+      "step": 0.1,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "vortex-background",
+  "label": "Vortex",
+  "componentPath": "VortexBackground",
+  "icon": "Loader2",
+  "description": "Spinning 3D vortex tunnel with mouse tilt",
+  "defaultProps": {
+    "color": "#6366f1",
+    "ringCount": 12,
+    "speed": 8,
+    "depth": 0.85
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Vortex Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Amber", "value": "#f59e0b" }
+      ]
+    },
+    {
+      "name": "ringCount",
+      "label": "Ring Count",
+      "type": "range",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "speed",
+      "label": "Spin Speed",
+      "type": "range",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "unit": "s"
+    },
+    {
+      "name": "depth",
+      "label": "Depth Darkness",
+      "type": "range",
+      "min": 0.3,
+      "max": 1,
+      "step": 0.05,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "neural-fabric",
+  "label": "Neural Fabric",
+  "componentPath": "NeuralFabric",
+  "icon": "Network",
+  "description": "Interactive elastic grid that repels from cursor",
+  "defaultProps": {
+    "color": "#6366f1",
+    "gridSize": 20,
+    "repelStrength": 0.5,
+    "repelRadius": 300,
+    "opacity": 0.4
+  },
+  "controls": [
+    {
+      "name": "color",
+      "label": "Node Color",
+      "type": "select",
+      "options": [
+        { "label": "Indigo", "value": "#6366f1" },
+        { "label": "Cyan", "value": "#06b6d4" },
+        { "label": "Pink", "value": "#ec4899" },
+        { "label": "Emerald", "value": "#10b981" }
+      ]
+    },
+    {
+      "name": "gridSize",
+      "label": "Grid Density",
+      "type": "range",
+      "min": 10,
+      "max": 30,
+      "step": 2,
+      "unit": ""
+    },
+    {
+      "name": "repelStrength",
+      "label": "Repel Strength",
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "unit": ""
+    },
+    {
+      "name": "repelRadius",
+      "label": "Repel Radius",
+      "type": "range",
+      "min": 100,
+      "max": 500,
+      "step": 20,
+      "unit": "px"
+    },
+    {
+      "name": "opacity",
+      "label": "Grid Opacity",
+      "type": "range",
+      "min": 0.1,
+      "max": 1,
+      "step": 0.1,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "depth-field",
+  "label": "Depth Field",
+  "componentPath": "DepthField",
+  "icon": "Layers",
+  "description": "Cinematic 3D perspective mesh tunneling toward a vanishing point, tilts with cursor",
+  "defaultProps": {
+    "gridColor": "#00ffe0",
+    "gridDensity": 12,
+    "driftSpeed": 0.4,
+    "fov": 400,
+    "tiltStrength": 0.35
+  },
+  "controls": [
+    {
+      "name": "gridColor",
+      "label": "Grid Color",
+      "type": "select",
+      "options": [
+        { "label": "Cyan",    "value": "#00ffe0" },
+        { "label": "Indigo",  "value": "#6366f1" },
+        { "label": "Amber",   "value": "#f59e0b" },
+        { "label": "Rose",    "value": "#fb7185" },
+        { "label": "Lime",    "value": "#84cc16" }
+      ]
+    },
+    {
+      "name": "gridDensity",
+      "label": "Grid Density",
+      "type": "range",
+      "min": 6,
+      "max": 24,
+      "step": 2,
+      "unit": ""
+    },
+    {
+      "name": "driftSpeed",
+      "label": "Drift Speed",
+      "type": "range",
+      "min": 0.1,
+      "max": 2.0,
+      "step": 0.1,
+      "unit": ""
+    },
+    {
+      "name": "fov",
+      "label": "Field of View",
+      "type": "range",
+      "min": 200,
+      "max": 800,
+      "step": 50,
+      "unit": "mm"
+    },
+    {
+      "name": "tiltStrength",
+      "label": "Tilt Strength",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.05,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "acid-bath",
+  "label": "Acid Bath",
+  "componentPath": "AcidBath",
+  "icon": "FlaskConical",
+  "description": "Noise-advected color field reacts to cursor heat",
+  "defaultProps": {
+    "palette": "toxic",
+    "viscosity": 0.6,
+    "noiseScale": 2.2,
+    "heatRadius": 180,
+    "speed": 0.4
+  },
+  "controls": [
+    {
+      "name": "palette",
+      "label": "Color Palette",
+      "type": "select",
+      "options": [
+        { "label": "Toxic (acid green)",  "value": "toxic"  },
+        { "label": "Molten (lava amber)", "value": "molten" },
+        { "label": "Void (deep violet)",  "value": "void"   },
+        { "label": "Blood (corrosive red)","value": "blood" }
+      ]
+    },
+    {
+      "name": "viscosity",
+      "label": "Viscosity",
+      "type": "range",
+      "min": 0.1,
+      "max": 0.95,
+      "step": 0.05,
+      "unit": ""
+    },
+    {
+      "name": "noiseScale",
+      "label": "Turbulence Scale",
+      "type": "range",
+      "min": 0.5,
+      "max": 5.0,
+      "step": 0.1,
+      "unit": "×"
+    },
+    {
+      "name": "heatRadius",
+      "label": "Cursor Heat Radius",
+      "type": "range",
+      "min": 60,
+      "max": 400,
+      "step": 20,
+      "unit": "px"
+    },
+    {
+      "name": "speed",
+      "label": "Flow Speed",
+      "type": "range",
+      "min": 0.05,
+      "max": 1.5,
+      "step": 0.05,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "silk",
+  "label": "Silk",
+  "componentPath": "Silk",
+  "icon": "Sparkles",
+  "description": "Luxury fashion hero with domain-warped shader-style noise — light through fabric, responds to cursor",
+  "defaultProps": {
+    "colorTemp": "pearl",
+    "warpIntensity": 3.5,
+    "driftSpeed": 0.18,
+    "contrast": 1.4,
+    "noiseScale": 320
+  },
+  "controls": [
+    {
+      "name": "colorTemp",
+      "label": "Color Temperature",
+      "type": "select",
+      "options": [
+        { "label": "Pearl (cool white)",   "value": "pearl" },
+        { "label": "Dusk (blush rose)",    "value": "dusk"  },
+        { "label": "Frost (icy blue)",     "value": "frost" },
+        { "label": "Ember (warm gold)",    "value": "ember" }
+      ]
+    },
+    {
+      "name": "warpIntensity",
+      "label": "Warp Intensity",
+      "type": "range",
+      "min": 0.5,
+      "max": 8.0,
+      "step": 0.5,
+      "unit": ""
+    },
+    {
+      "name": "driftSpeed",
+      "label": "Drift Speed",
+      "type": "range",
+      "min": 0.02,
+      "max": 1.0,
+      "step": 0.02,
+      "unit": ""
+    },
+    {
+      "name": "contrast",
+      "label": "Contrast",
+      "type": "range",
+      "min": 0.5,
+      "max": 3.0,
+      "step": 0.1,
+      "unit": ""
+    },
+    {
+      "name": "noiseScale",
+      "label": "Fabric Scale",
+      "type": "range",
+      "min": 80,
+      "max": 800,
+      "step": 20,
+      "unit": "px"
+    }
+  ]
+},
+{
+  "id": "halo",
+  "label": "Halo",
+  "componentPath": "Halo",
+  "icon": "Circle",
+  "description": "Glassmorphism floating orbs with specular highlights, refraction, soft collision physics and cursor interaction",
+  "defaultProps": {
+    "accentColor": "#7c3aed",
+    "orbCount": 8,
+    "sizeScale": 1.0,
+    "frostAmount": 0.5,
+    "driftSpeed": 1.0
+  },
+  "controls": [
+    {
+      "name": "accentColor",
+      "label": "Accent Color",
+      "type": "select",
+      "options": [
+        { "label": "Violet",   "value": "#7c3aed" },
+        { "label": "Cyan",     "value": "#06b6d4" },
+        { "label": "Rose",     "value": "#f43f5e" },
+        { "label": "Amber",    "value": "#f59e0b" },
+        { "label": "Emerald",  "value": "#10b981" },
+        { "label": "Indigo",   "value": "#4f46e5" }
+      ]
+    },
+    {
+      "name": "orbCount",
+      "label": "Orb Count",
+      "type": "range",
+      "min": 3,
+      "max": 16,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "sizeScale",
+      "label": "Orb Size",
+      "type": "range",
+      "min": 0.4,
+      "max": 2.0,
+      "step": 0.1,
+      "unit": "×"
+    },
+    {
+      "name": "frostAmount",
+      "label": "Frost / Opacity",
+      "type": "range",
+      "min": 0.0,
+      "max": 1.0,
+      "step": 0.05,
+      "unit": ""
+    },
+    {
+      "name": "driftSpeed",
+      "label": "Drift Speed",
+      "type": "range",
+      "min": 0.2,
+      "max": 3.0,
+      "step": 0.1,
+      "unit": "×"
+    }
+  ]
+},
+{
+  "id": "arc",
+  "label": "Arc",
+  "componentPath": "Arc",
+  "icon": "Zap",
+  "description": "Cinematic lightning/plasma discharge system with midpoint displacement algorithm, recursive branching, and mouse attraction",
+  "defaultProps": {
+    "boltColor": "plasma",
+    "arcCount": 6,
+    "branchProbability": 0.35,
+    "dischargeFrequency": 3,
+    "intensity": 0.85
+  },
+  "controls": [
+    {
+      "name": "boltColor",
+      "label": "Bolt Color",
+      "type": "select",
+      "options": [
+        { "label": "Plasma (violet)",    "value": "plasma"  },
+        { "label": "Toxic (green)",      "value": "toxic"   },
+        { "label": "Inferno (orange)",   "value": "inferno" },
+        { "label": "Void (cyan)",        "value": "void"    }
+      ]
+    },
+    {
+      "name": "arcCount",
+      "label": "Arc Count",
+      "type": "range",
+      "min": 2,
+      "max": 14,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "branchProbability",
+      "label": "Branch Probability",
+      "type": "range",
+      "min": 0.0,
+      "max": 0.8,
+      "step": 0.05,
+      "unit": ""
+    },
+    {
+      "name": "dischargeFrequency",
+      "label": "Discharge Frequency",
+      "type": "range",
+      "min": 0.5,
+      "max": 10,
+      "step": 0.5,
+      "unit": "/s"
+    },
+    {
+      "name": "intensity",
+      "label": "Intensity",
+      "type": "range",
+      "min": 0.2,
+      "max": 1.0,
+      "step": 0.05,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "dune",
+  "label": "Dune",
+  "componentPath": "Dune",
+  "icon": "Wind",
+  "description": "Organic desert landscape with parallax bezier dune ridges, wind-driven sand grain particles, and mouse-controlled wind direction",
+  "defaultProps": {
+    "palette": "sahara",
+    "duneCount": 5,
+    "windStrength": 1.0,
+    "particleDensity": 1.0,
+    "parallaxDepth": 1.0
+  },
+  "controls": [
+    {
+      "name": "palette",
+      "label": "Color Palette",
+      "type": "select",
+      "options": [
+        { "label": "Sahara (golden ochre)",   "value": "sahara"   },
+        { "label": "Mars (red oxide)",         "value": "mars"     },
+        { "label": "Arctic (ice blue)",        "value": "arctic"   },
+        { "label": "Obsidian (volcanic ash)",  "value": "obsidian" }
+      ]
+    },
+    {
+      "name": "duneCount",
+      "label": "Dune Layers",
+      "type": "range",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "unit": ""
+    },
+    {
+      "name": "windStrength",
+      "label": "Wind Strength",
+      "type": "range",
+      "min": 0.1,
+      "max": 3.0,
+      "step": 0.1,
+      "unit": ""
+    },
+    {
+      "name": "particleDensity",
+      "label": "Particle Density",
+      "type": "range",
+      "min": 0.2,
+      "max": 3.0,
+      "step": 0.1,
+      "unit": "×"
+    },
+    {
+      "name": "parallaxDepth",
+      "label": "Parallax Depth",
+      "type": "range",
+      "min": 0.0,
+      "max": 2.0,
+      "step": 0.1,
+      "unit": ""
+    }
+  ]
+},
+{
+  "id": "monsoon",
+  "label": "Monsoon",
+  "componentPath": "Monsoon",
+  "icon": "CloudRain",
+  "description": "Cinematic multi-layer rain with depth streaks, elliptical ripple impacts, persistent glass streaks on a second canvas, and mouse-controlled wind",
+  "defaultProps": {
+    "colorScheme": "nightcity",
+    "intensity": 1.0,
+    "windAngle": 15,
+    "streakPersistence": 0.6,
+    "rippleCount": 1.0
+  },
+  "controls": [
+    {
+      "name": "colorScheme",
+      "label": "Color Scheme",
+      "type": "select",
+      "options": [
+        { "label": "Night City (blue neon)",  "value": "nightcity" },
+        { "label": "Blood Moon (crimson)",    "value": "bloodmoon" },
+        { "label": "Arctic (cyan ice)",       "value": "arctic"    },
+        { "label": "Toxic (acid green)",      "value": "toxic"     }
+      ]
+    },
+    {
+      "name": "intensity",
+      "label": "Rain Intensity",
+      "type": "range",
+      "min": 0.2,
+      "max": 3.0,
+      "step": 0.1,
+      "unit": "×"
+    },
+    {
+      "name": "windAngle",
+      "label": "Wind Angle",
+      "type": "range",
+      "min": -45,
+      "max": 45,
+      "step": 5,
+      "unit": "°"
+    },
+    {
+      "name": "streakPersistence",
+      "label": "Glass Streak Persistence",
+      "type": "range",
+      "min": 0.0,
+      "max": 1.0,
+      "step": 0.05,
+      "unit": ""
+    },
+    {
+      "name": "rippleCount",
+      "label": "Ripple Density",
+      "type": "range",
+      "min": 0.0,
+      "max": 2.0,
+      "step": 0.1,
+      "unit": "×"
+    }
+  ]
+},
+{
+  "id": "wormholevortex",
+  "label": "Wormhole Vortex",
+  "componentPath": "WormHoleVortex",
+  "icon": "Orbit",
+  "description": "Retro-glitchy wormhole tunnel with per-ring chromatic aberration, scanline tears, RGB channel splitting, and CRT phosphor glow",
+  "defaultProps": {
+    "ringColor": "phosphor",
+    "tunnelSpeed": 1.0,
+    "ringCount": 24,
+    "glitchIntensity": 0.5,
+    "aberrationStrength": 8
+  },
+  "controls": [
+    {
+      "name": "ringColor",
+      "label": "Ring Color",
+      "type": "select",
+      "options": [
+        { "label": "Phosphor (CRT green)",  "value": "phosphor" },
+        { "label": "Plasma (violet)",       "value": "plasma"   },
+        { "label": "Infra (hot orange)",    "value": "infra"    },
+        { "label": "Ice (cold cyan)",       "value": "ice"      }
+      ]
+    },
+    {
+      "name": "tunnelSpeed",
+      "label": "Tunnel Speed",
+      "type": "range",
+      "min": 0.1,
+      "max": 5.0,
+      "step": 0.1,
+      "unit": "×"
+    },
+    {
+      "name": "ringCount",
+      "label": "Ring Count",
+      "type": "range",
+      "min": 8,
+      "max": 48,
+      "step": 2,
+      "unit": ""
+    },
+    {
+      "name": "glitchIntensity",
+      "label": "Glitch Intensity",
+      "type": "range",
+      "min": 0.0,
+      "max": 1.0,
+      "step": 0.05,
+      "unit": ""
+    },
+    {
+      "name": "aberrationStrength",
+      "label": "Chromatic Aberration",
+      "type": "range",
+      "min": 0,
+      "max": 24,
+      "step": 1,
+      "unit": "px"
+    }
+  ]
+}
+]
