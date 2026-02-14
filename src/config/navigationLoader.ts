@@ -28,7 +28,7 @@ export const loadNavigation = () => {
       description: item.description,
       defaultProps: item.defaultProps,
       controls: item.controls,
-      componentPath: item.componentPath, // passed to page.tsx for server-side file reading
+      componentPath: item.componentPath,
     })),
   }));
 };
