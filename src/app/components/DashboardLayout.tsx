@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronRight, Search, Eye, Code2, Copy, Check, Terminal, BookOpen, FileCode2, X, Download, Package, Zap, Wrench } from "lucide-react";
+import { ChevronRight, Search, Eye, Code2, Copy, Check, Terminal, BookOpen, FileCode2, X, Download, Package, Zap, Wrench, Menu } from "lucide-react";
 import { loadNavigation } from "@/config/navigationLoader";
 import { ComponentConfig, NavCategory } from "@/app/components/types";
 import { BorderGlowButton } from "@/components/BorderGlowButton/BorderGlowButton";
@@ -86,6 +86,7 @@ function CodeBlock({
     </div>
   );
 }
+
 function InstallationPage() {
   return (
     <div className="space-y-12">
@@ -102,7 +103,7 @@ function InstallationPage() {
         </p>
       </div>
 
-      {/* Introduction - The fluff nobody reads */}
+      {/* Introduction */}
       <div className="border-l-4 border-indigo-500/50 pl-6 bg-gradient-to-r from-indigo-500/5 to-transparent py-4 rounded-r-xl">
         <h2 className="text-2xl font-bold mb-4">👋 Introduction</h2>
         <div className="space-y-4 text-zinc-400 leading-relaxed">
@@ -115,7 +116,7 @@ function InstallationPage() {
         </div>
       </div>
 
-      {/* Mission - More corporate speak */}
+      {/* Mission */}
       <div>
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           🎯 Our Mission
@@ -133,7 +134,7 @@ function InstallationPage() {
         </div>
       </div>
 
-      {/* Free Forever - The feel-good section */}
+      {/* Free Forever */}
       <div className="bg-gradient-to-br from-emerald-500/10 via-transparent to-blue-500/10 border border-emerald-500/20 rounded-2xl p-8">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           💚 Free & Open Source. Forever.
@@ -217,7 +218,7 @@ export default function App() {
         />
       </div>
 
-      {/* Tailwind Setup (if needed) */}
+      {/* Tailwind Setup */}
       <div>
         <h2 className="text-2xl font-bold mb-4">Tailwind CSS Setup</h2>
         <p className="text-zinc-500 mb-4">
@@ -263,6 +264,154 @@ npx tailwindcss init -p`}
   );
 }
 
+// Sidebar Navigation Component (reusable for mobile and desktop)
+function NavigationContent({ 
+  filteredNavigation, 
+  activeItemId, 
+  showInstallation,
+  searchQuery,
+  searchFocused,
+  totalResults,
+  onItemChange,
+  onSearchChange,
+  onSearchFocus,
+  onSearchBlur,
+  onClearSearch,
+  onClose
+}: any) {
+  return (
+    <>
+      <div
+        className={`mb-6 relative flex w-full items-center rounded-xl border bg-zinc-900/50 px-3.5 py-2.5 text-sm transition-all duration-200 ${
+          searchFocused
+            ? "border-indigo-500/50 shadow-[0_0_0_3px_rgba(99,102,241,0.1)]"
+            : "border-white/5 hover:border-white/10"
+        }`}
+      >
+        <Search
+          size={14}
+          className={`mr-2.5 shrink-0 transition-colors ${
+            searchFocused ? "text-indigo-400" : "text-zinc-500"
+          }`}
+        />
+        <input
+          type="text"
+          placeholder="Search components..."
+          value={searchQuery}
+          onChange={(e) => onSearchChange(e.target.value)}
+          onFocus={onSearchFocus}
+          onBlur={onSearchBlur}
+          className="flex-1 bg-transparent text-zinc-200 placeholder:text-zinc-600 outline-none text-sm"
+        />
+        {searchQuery && (
+          <button
+            onClick={onClearSearch}
+            className="ml-1.5 text-zinc-500 hover:text-zinc-300 transition-colors"
+          >
+            <X size={13} />
+          </button>
+        )}
+        {!searchQuery && (
+          <kbd className="hidden rounded bg-white/5 px-1.5 py-0.5 text-[10px] font-bold text-zinc-500 lg:block shrink-0">
+            ⌘K
+          </kbd>
+        )}
+      </div>
+
+      <AnimatePresence>
+        {searchQuery && (
+          <motion.p
+            initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+            animate={{ opacity: 1, height: "auto", marginBottom: 12 }}
+            exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+            className="text-[11px] text-zinc-500 px-1 overflow-hidden"
+          >
+            {totalResults === 0
+              ? "No components found"
+              : `${totalResults} component${totalResults !== 1 ? "s" : ""} found`}
+          </motion.p>
+        )}
+      </AnimatePresence>
+
+      <div className="flex-1 overflow-y-auto nav-scroll -mx-5 px-5 pb-4">
+        <AnimatePresence mode="wait">
+          {filteredNavigation.length === 0 ? (
+            <motion.div
+              key="empty"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="flex flex-col items-center justify-center py-16 text-center"
+            >
+              <div className="text-3xl mb-3">🔍</div>
+              <p className="text-sm text-zinc-500">No results for</p>
+              <p className="text-sm font-medium text-zinc-300 mt-1">
+                &ldquo;{searchQuery}&rdquo;
+              </p>
+            </motion.div>
+          ) : (
+            <motion.div key="results" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+              {filteredNavigation.map((category: any, catIndex: number) => (
+                <div key={catIndex} className="mb-7">
+                  <h4 className="mb-2.5 text-[10px] font-bold uppercase tracking-widest text-zinc-600 px-2">
+                    {category.category}
+                  </h4>
+                  <ul className="space-y-0.5">
+                    {category.items.map((item: any) => {
+                      const isActive = activeItemId === item.id && !showInstallation;
+                      return (
+                        <li key={item.id}>
+                          <button
+                            onClick={() => {
+                              onItemChange(item.id);
+                              onClearSearch();
+                              onClose?.();
+                            }}
+                            className={`group flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm transition-all duration-200 relative cursor-pointer ${
+                              isActive
+                                ? "bg-indigo-500/10 text-indigo-300 font-medium"
+                                : "text-zinc-400 hover:bg-white/5 hover:text-white"
+                            }`}
+                          >
+                            {isActive && (
+                              <motion.div
+                                layoutId="activeIndicator"
+                                className="absolute left-0 h-5 w-[3px] rounded-full bg-gradient-to-b from-indigo-400 to-violet-500"
+                              />
+                            )}
+                            {item.icon && (
+                              <span
+                                className={`transition-colors ${
+                                  isActive
+                                    ? "text-indigo-400"
+                                    : "text-zinc-600 group-hover:text-zinc-300"
+                                }`}
+                              >
+                                {item.icon}
+                              </span>
+                            )}
+                            <span className="truncate">{item.label}</span>
+                            {isActive && (
+                              <ChevronRight
+                                className="ml-auto shrink-0 text-indigo-500"
+                                size={14}
+                              />
+                            )}
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </>
+  );
+}
+
 interface DashboardLayoutProps {
   sourceMap: Record<string, string>;
 }
@@ -275,7 +424,8 @@ export default function DashboardLayout({ sourceMap }: DashboardLayoutProps) {
   );
   const [searchQuery, setSearchQuery] = useState("");
   const [searchFocused, setSearchFocused] = useState(false);
-  const [showInstallation, setShowInstallation] = useState(false); // NEW
+  const [showInstallation, setShowInstallation] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); // NEW
 
   const activeItem = flatItems.find((item) => item.id === activeItemId);
 
@@ -298,12 +448,10 @@ export default function DashboardLayout({ sourceMap }: DashboardLayoutProps) {
   React.useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     
-    // Handle docs param
     if (params.get('docs') === 'true') {
       setShowInstallation(true);
     }
     
-    // Handle component param
     const componentParam = params.get('component');
     if (componentParam) {
       handleItemChange(componentParam);
@@ -315,24 +463,23 @@ export default function DashboardLayout({ sourceMap }: DashboardLayoutProps) {
   if (!activeItem) return null;
 
   const handleItemChange = (itemId: string) => {
-  const newItem = flatItems.find((item) => item.id === itemId);
-  if (newItem) {
-    setActiveItemId(itemId);
-    setComponentProps(newItem.defaultProps);
-    setShowInstallation(false);
-    
-    const url = new URL(window.location.href);
-    url.searchParams.set('component', itemId);
-    window.history.pushState({}, '', url);
-  }
-};
+    const newItem = flatItems.find((item) => item.id === itemId);
+    if (newItem) {
+      setActiveItemId(itemId);
+      setComponentProps(newItem.defaultProps);
+      setShowInstallation(false);
+      
+      const url = new URL(window.location.href);
+      url.searchParams.set('component', itemId);
+      window.history.pushState({}, '', url);
+    }
+  };
 
   const handlePropChange = (propName: string, value: any) => {
     setComponentProps((prev) => ({ ...prev, [propName]: value }));
   };
 
   const componentName = activeItem.label.replace(/\s/g, "");
-  const packageName = activeItem.id.toLowerCase().replace(/-/g, "");
   const category = dashboardNavigation.find((cat) =>
     cat.items.some((item) => item.id === activeItem.id)
   );
@@ -354,18 +501,18 @@ pnpm add @volt-ui/react`;
       .join("\n        "); 
 
     const onClickSnippet = isButton
-      ? `\n      onClick={() => console.log("clicked!")}`
+      ? `\n        onClick={() => console.log("clicked!")}`
       : "";
 
     return `import { ${componentName} } from '@volt-ui/react';
 
-  export default function Example() {
-    return (
-      <${componentName}
-        ${propsString}${onClickSnippet}
-      />
-    );
-  }`;
+export default function Example() {
+  return (
+    <${componentName}
+      ${propsString}${onClickSnippet}
+    />
+  );
+}`;
   })();
 
   const fullSourceCode = (activeItem.componentPath && sourceMap[activeItem.componentPath])
@@ -375,7 +522,6 @@ pnpm add @volt-ui/react`;
 
   return (
     <div className="flex min-h-screen w-full bg-[#030303] text-white selection:bg-indigo-500/30 font-sans">
-
       <style>{`
         .nav-scroll {
           scrollbar-width: thin;
@@ -408,8 +554,93 @@ pnpm add @volt-ui/react`;
         }
       `}</style>
 
+      {/* Mobile Menu Button */}
+      <div className="md:hidden fixed top-4 left-4 z-50">
+        <button
+          onClick={() => setMobileMenuOpen(true)}
+          className="flex items-center gap-2 bg-zinc-900 border border-white/10 rounded-xl px-4 py-2.5 text-sm font-medium text-white shadow-lg"
+        >
+          <Menu size={18} />
+          <span>Menu</span>
+        </button>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="md:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+            />
+            
+            <motion.aside
+              initial={{ x: -300 }}
+              animate={{ x: 0 }}
+              exit={{ x: -300 }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="md:hidden fixed left-0 top-0 h-screen w-80 flex flex-col border-r border-white/5 bg-[#030303] px-5 py-8 z-50 overflow-y-auto"
+            >
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors"
+              >
+                <X size={24} />
+              </button>
+
+              <Link 
+                href="/" 
+                className="mb-8 flex items-center gap-2 px-1"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <div className="h-6 w-6 bg-indigo-600 rounded-sm italic flex items-center justify-center text-[10px] font-black">
+                  V
+                </div>
+                <span className="text-xl font-bold tracking-tighter">VOLT UI</span>
+              </Link>
+
+              <div className="mb-4">
+                <BorderGlowButton 
+                  onClick={() => {
+                    setShowInstallation(true);
+                    setMobileMenuOpen(false);
+                    const url = new URL(window.location.href);
+                    url.searchParams.set('docs', 'true');
+                    url.searchParams.delete('component'); 
+                    window.history.pushState({}, '', url);
+                  }}
+                  children="Installation"
+                  color="#000"
+                  glowColor="#4f46e5"
+                  speed={2}
+                  className="w-full justify-center"
+                />
+              </div>
+
+              <NavigationContent
+                filteredNavigation={filteredNavigation}
+                activeItemId={activeItemId}
+                showInstallation={showInstallation}
+                searchQuery={searchQuery}
+                searchFocused={searchFocused}
+                totalResults={totalResults}
+                onItemChange={handleItemChange}
+                onSearchChange={setSearchQuery}
+                onSearchFocus={() => setSearchFocused(true)}
+                onSearchBlur={() => setSearchFocused(false)}
+                onClearSearch={() => setSearchQuery("")}
+                onClose={() => setMobileMenuOpen(false)}
+              />
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* Desktop Sidebar */}
       <aside className="sticky top-0 hidden h-screen w-72 flex-col border-r border-white/5 bg-[#030303] px-5 py-8 md:flex lg:w-80">
-        {/* Branding */}
         <Link 
           href="/" className="mb-8 flex items-center gap-2 px-1">
           <div className="h-6 w-6 bg-indigo-600 rounded-sm italic flex items-center justify-center text-[10px] font-black">
@@ -432,142 +663,29 @@ pnpm add @volt-ui/react`;
             glowColor="#4f46e5"
             speed={2}
             className="w-full justify-center"
-/>
-        </div>
-
-        <div
-          className={`mb-6 relative flex w-full items-center rounded-xl border bg-zinc-900/50 px-3.5 py-2.5 text-sm transition-all duration-200 ${
-            searchFocused
-              ? "border-indigo-500/50 shadow-[0_0_0_3px_rgba(99,102,241,0.1)]"
-              : "border-white/5 hover:border-white/10"
-          }`}
-        >
-          <Search
-            size={14}
-            className={`mr-2.5 shrink-0 transition-colors ${
-              searchFocused ? "text-indigo-400" : "text-zinc-500"
-            }`}
           />
-          <input
-            type="text"
-            placeholder="Search components..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            onFocus={() => setSearchFocused(true)}
-            onBlur={() => setSearchFocused(false)}
-            className="flex-1 bg-transparent text-zinc-200 placeholder:text-zinc-600 outline-none text-sm"
-          />
-          {searchQuery && (
-            <button
-              onClick={() => setSearchQuery("")}
-              className="ml-1.5 text-zinc-500 hover:text-zinc-300 transition-colors"
-            >
-              <X size={13} />
-            </button>
-          )}
-          {!searchQuery && (
-            <kbd className="hidden rounded bg-white/5 px-1.5 py-0.5 text-[10px] font-bold text-zinc-500 lg:block shrink-0">
-              ⌘K
-            </kbd>
-          )}
         </div>
 
-        <AnimatePresence>
-          {searchQuery && (
-            <motion.p
-              initial={{ opacity: 0, height: 0, marginBottom: 0 }}
-              animate={{ opacity: 1, height: "auto", marginBottom: 12 }}
-              exit={{ opacity: 0, height: 0, marginBottom: 0 }}
-              className="text-[11px] text-zinc-500 px-1 overflow-hidden"
-            >
-              {totalResults === 0
-                ? "No components found"
-                : `${totalResults} component${totalResults !== 1 ? "s" : ""} found`}
-            </motion.p>
-          )}
-        </AnimatePresence>
-
-        <div className="flex-1 overflow-y-auto nav-scroll -mx-5 px-5 pb-4">
-          <AnimatePresence mode="wait">
-            {filteredNavigation.length === 0 ? (
-              <motion.div
-                key="empty"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="flex flex-col items-center justify-center py-16 text-center"
-              >
-                <div className="text-3xl mb-3">🔍</div>
-                <p className="text-sm text-zinc-500">No results for</p>
-                <p className="text-sm font-medium text-zinc-300 mt-1">
-                  &ldquo;{searchQuery}&rdquo;
-                </p>
-              </motion.div>
-            ) : (
-              <motion.div key="results" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                {filteredNavigation.map((category, catIndex) => (
-                  <div key={catIndex} className="mb-7">
-                    <h4 className="mb-2.5 text-[10px] font-bold uppercase tracking-widest text-zinc-600 px-2">
-                      {category.category}
-                    </h4>
-                    <ul className="space-y-0.5">
-                      {category.items.map((item) => {
-                        const isActive = activeItemId === item.id && !showInstallation;
-                        return (
-                          <li key={item.id}>
-                            <button
-                              onClick={() => {
-                                handleItemChange(item.id);
-                                setSearchQuery("");
-                              }}
-                              className={`group flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm transition-all duration-200 relative cursor-pointer ${
-                                isActive
-                                  ? "bg-indigo-500/10 text-indigo-300 font-medium"
-                                  : "text-zinc-400 hover:bg-white/5 hover:text-white"
-                              }`}
-                            >
-                              {isActive && (
-                                <motion.div
-                                  layoutId="activeIndicator"
-                                  className="absolute left-0 h-5 w-[3px] rounded-full bg-gradient-to-b from-indigo-400 to-violet-500"
-                                />
-                              )}
-                              {item.icon && (
-                                <span
-                                  className={`transition-colors ${
-                                    isActive
-                                      ? "text-indigo-400"
-                                      : "text-zinc-600 group-hover:text-zinc-300"
-                                  }`}
-                                >
-                                  {item.icon}
-                                </span>
-                              )}
-                              <span className="truncate">{item.label}</span>
-                              {isActive && (
-                                <ChevronRight
-                                  className="ml-auto shrink-0 text-indigo-500"
-                                  size={14}
-                                />
-                              )}
-                            </button>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+        <NavigationContent
+          filteredNavigation={filteredNavigation}
+          activeItemId={activeItemId}
+          showInstallation={showInstallation}
+          searchQuery={searchQuery}
+          searchFocused={searchFocused}
+          totalResults={totalResults}
+          onItemChange={handleItemChange}
+          onSearchChange={setSearchQuery}
+          onSearchFocus={() => setSearchFocused(true)}
+          onSearchBlur={() => setSearchFocused(false)}
+          onClearSearch={() => setSearchQuery("")}
+        />
       </aside>
 
+      {/* Main Content */}
       <main className="flex-1 relative overflow-y-auto">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
-        <div className="mx-auto max-w-5xl px-6 py-12 md:px-12 lg:py-20 relative z-10">
-
+        <div className="mx-auto max-w-5xl px-6 py-12 md:px-12 lg:py-20 relative z-10 mt-16 md:mt-0">
           {showInstallation ? (
             <InstallationPage />
           ) : (
@@ -581,7 +699,7 @@ pnpm add @volt-ui/react`;
                       </span>
                     )}
                   </div>
-                  <h1 className="text-4xl font-black tracking-tight md:text-5xl">
+                  <h1 className="text-3xl font-black tracking-tight md:text-4xl lg:text-5xl">
                     {activeItem.label}
                   </h1>
                   <p className="mt-2 text-zinc-500">{activeItem.description}</p>
@@ -590,7 +708,7 @@ pnpm add @volt-ui/react`;
                 <div className="flex items-center rounded-xl border border-white/5 bg-zinc-900/50 p-1 backdrop-blur-md shrink-0">
                   <button
                     onClick={() => setViewMode("preview")}
-                    className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all cursor-pointer ${
+                    className={`flex items-center gap-2 rounded-lg px-3 md:px-4 py-2 text-xs md:text-sm font-medium transition-all cursor-pointer ${
                       viewMode === "preview"
                         ? "bg-white/10 text-white shadow-sm"
                         : "text-zinc-400 hover:text-white"
@@ -600,7 +718,7 @@ pnpm add @volt-ui/react`;
                   </button>
                   <button
                     onClick={() => setViewMode("code")}
-                    className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all cursor-pointer ${
+                    className={`flex items-center gap-2 rounded-lg px-3 md:px-4 py-2 text-xs md:text-sm font-medium transition-all cursor-pointer ${
                       viewMode === "code"
                         ? "bg-white/10 text-white shadow-sm"
                         : "text-zinc-400 hover:text-white"
@@ -628,7 +746,6 @@ pnpm add @volt-ui/react`;
                     </div>
                   ) : (
                     <div className="space-y-5">
-
                       <CodeBlock
                         label="Install"
                         icon={<Terminal size={11} />}
